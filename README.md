@@ -1,7 +1,36 @@
+# Web Resume: "Last Boss"
+**IT 223 - Midterm Performance Innovative Task**
+
+---
+
+## Project Overview
+A personal portfolio website created using HTML, CSS, JavaScript, and jQuery. It demonstrates my basic web development skills, like making buttons work and styling the page.
+
+## Student Information
+* **Name:** Eddie R. Cairel Jr.
+* **Section:** IT2R1
+* **Course:** BSIT - 2nd Year (USTP)
+
+## Project Links
+* **Video Demo:** [Insert Video Link Here]
+* **GitHub Repository:** [Cairel_resume Repo](https://github.com/caireleddie222-ctrl/Cairel_resume)
+* **Live Website:** [View on GitHub Pages](https://caireleddie222-ctrl.github.io/Cairel_resume/)
+
+---
+
+## Features Implemented
+* **Dark/Light Mode Toggle:** Implemented using CSS variables and jQuery for seamless theme switching.
+* **Dynamic Project Filtering:** Users can filter portfolio items by category (e.g., Web Apps, Systems & DB) without reloading the page.
+* **Interactive Contact Form:** Captures user input and displays it in a custom popup modal upon successful validation.
+* **Responsive Layout:** Clean, mobile-friendly design using modern CSS.
+
+---
+
 ## AI Use Declaration
 
 **AI Tool(s) Used:** Gemini and ChatGPT
-**Purpose of AI Use (check all that apply):** [ ] brainstorming  
+**Purpose of AI Use (check all that apply):** 
+[ ] brainstorming  
 [ ] layout/UI ideas  
 [x] debugging  
 [x] code generation  
