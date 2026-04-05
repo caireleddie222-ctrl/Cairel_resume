@@ -12,7 +12,7 @@ A personal portfolio website created using HTML, CSS, JavaScript, and jQuery. It
 * **Course:** BSIT - 2nd Year (USTP)
 
 ## Project Links
-* **Video Demo:** [Insert Video Link Here]
+* **Video Demo:** https://youtu.be/Z9pIgpJkRwY
 * **GitHub Repository:** [Cairel_resume Repo](https://github.com/caireleddie222-ctrl/Cairel_resume)
 * **Live Website:** [View on GitHub Pages](https://caireleddie222-ctrl.github.io/Cairel_resume/)
 
@@ -38,7 +38,7 @@ A personal portfolio website created using HTML, CSS, JavaScript, and jQuery. It
 [x] styling suggestions  
 [ ] other: ____________
 
-**Where AI was used (short description):**
+**Where AI was used :**
 I used AI to help understand how to implement CSS variables for a seamless dark/light mode transition. I also used it to generate the initial logic for preventing the contact form from refreshing the page (`e.preventDefault()`) and instead capturing the data to display in a custom modal popup. Finally, I asked for help structuring the jQuery logic to filter my project cards based on category buttons.
 
 I confirm that I reviewed, tested, and understood the final code I submitted.
