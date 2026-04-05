@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eddie Cairel Jr. | Software Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">EC.</h1>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button id="theme-toggle" class="nav-btn">Dark Mode</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero-section">
+            <p class="greeting"><span id="time-greeting">Welcome</span>, <span id="visitor-name" class="highlight-text">Guest</span>.</p>
+        </div>
+
+        -
+
+        <section id="education" class="section-box">
+            <h2>Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Technical Curriculum in Information Technology</h3>
+                    <p class="date">Current</p>
+                    <p>Modules Completed: Version Control, HTML5, CSS3, JavaScript ES6, and jQuery.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section-box">
+            <h2>Technical Expertise</h2>
+            <p class="section-desc">Click on a skill area to view details.</p>
+            <div class="skill-container">
+                <div class="skill-item">
+                    <button class="skill-toggle">Full-Stack Development <span class="icon">+</span></button>
+                    <div class="skill-details" style="display: none;">
+                        <p>Experienced in building responsive web applications using Laravel for backend architecture and Tailwind CSS for rapid frontend styling. Capable of translating Figma designs into functional code.</p>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <button class="skill-toggle">Linux & System Administration <span class="icon">+</span></button>
+                    <div class="skill-details" style="display: none;">
+                        <p>Proficient in navigating Linux environments, managing directories, and writing functional Bash scripts utilizing data structures to automate repetitive system tasks.</p>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <button class="skill-toggle">Database Architecture <span class="icon">+</span></button>
+                    <div class="skill-details" style="display: none;">
+                        <p>Skilled in designing relational MySQL databases and executing complex queries. Familiar with thin-client architecture separating database operations from GUI frameworks.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section-box">
+            <h2>Selected Projects</h2>
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All Works</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="system">Systems & DB</button>
+            </div>
+
+            <div class="project-grid" id="project-container">
+                <div class="project-card" data-category="system">
+                    <h3>System Automator</h3>
+                    <p>Functional Bash script utilizing data structures for Linux automation.</p>
+                </div>
+                <div class="project-card" data-category="system">
+                    <h3>Auto Parts Database</h3>
+                    <p>MySQL backend with thin-client GUI architecture.</p>
+                </div>
+                <div class="project-card" data-category="web">
+                    <h3>School Scheduler App</h3>
+                    <p>Real-time room availability management for instructors and students.</p>
+                </div>
+                <div class="project-card" data-category="web">
+                    <h3>Laravel Portfolio</h3>
+                    <p>Web application built with Laravel, Tailwind CSS, and Figma designs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-box">
+            <h2>Send a Message</h2>
+            <form id="contact-form" class="clean-form">
+                <div class="form-row">
+                    <div class="form-group half-width">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Name Surname">
+                    </div>
+                    <div class="form-group half-width">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Eddie@example.com">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="How can we work together?"></textarea>
+                </div>
+                <p id="form-feedback" class="error-msg"></p>
+                <button type="submit" class="action-btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Eddie Cairel Jr. | Built with HTML, CSS, & JS.</p>
+    </footer>
+
+    <div id="submission-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2 class="modal-title">Message Sent Successfully</h2>
+            <p>Thank you for reaching out. Here is a copy of your submission:</p>
+            <div class="modal-data">
+                <p><strong>Name:</strong> <span id="modal-name"></span></p>
+                <p><strong>Email:</strong> <span id="modal-email"></span></p>
+                <p><strong>Message:</strong> <span id="modal-msg"></span></p>
+            </div>
+            <button id="close-modal" class="action-btn outline-btn">Close Window</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

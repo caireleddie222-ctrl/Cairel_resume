@@ -1,0 +1,366 @@
+/* --- CSS Reset & Variables --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Modern Light Theme Palette */
+    --bg-color: #f8fafc;
+    --surface-color: #ffffff;
+    --text-primary: #334155;
+    --text-secondary: #64748b;
+    --accent-color: #2563eb;
+    --accent-hover: #1d4ed8;
+    --border-color: #e2e8f0;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+body.dark-mode {
+    /* Sleek Dark Theme Palette */
+    --bg-color: #0f172a;
+    --surface-color: #1e293b;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --accent-color: #3b82f6;
+    --accent-hover: #60a5fa;
+    --border-color: #334155;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* --- Typography --- */
+h1, h2, h3 {
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-primary);
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+p { margin-bottom: 1rem; }
+
+/* --- Navigation --- */
+.navbar {
+    background-color: var(--surface-color);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.nav-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    letter-spacing: -1px;
+}
+
+.navbar nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.navbar nav a:hover {
+    color: var(--accent-color);
+}
+
+.nav-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.nav-btn:hover {
+    background-color: var(--border-color);
+}
+
+/* --- Layout --- */
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+.hero-section {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-top: 2rem;
+}
+
+.greeting {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+}
+
+.highlight-text {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.section-box {
+    background: var(--surface-color);
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+/* --- Profile --- */
+.profile-content {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    box-shadow: var(--shadow);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+/* --- Skills Accordion --- */
+.section-desc {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.skill-item {
+    margin-bottom: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.skill-toggle {
+    width: 100%;
+    text-align: left;
+    background-color: transparent;
+    color: var(--text-primary);
+    padding: 1rem 1.25rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    transition: background-color 0.2s;
+}
+
+.skill-toggle:hover {
+    background-color: var(--bg-color);
+}
+
+.skill-details {
+    padding: 1rem 1.25rem;
+    background-color: var(--bg-color);
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* --- Projects --- */
+.filter-controls {
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.filter-btn {
+    padding: 6px 16px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.filter-btn:hover { border-color: var(--text-primary); }
+
+.filter-btn.active {
+    background-color: var(--text-primary);
+    color: var(--bg-color);
+    border-color: var(--text-primary);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background-color: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.project-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+}
+
+/* --- Forms --- */
+.clean-form .form-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.half-width { flex: 1; }
+
+.form-group { margin-bottom: 1.25rem; }
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--surface-color);
+    color: var(--text-primary);
+    font-family: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.error-msg {
+    color: #ef4444;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.action-btn {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.action-btn:hover { background-color: var(--accent-hover); }
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border-color);
+}
+
+/* --- Modal --- */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(4px); /* Clean modern blur */
+    z-index: 1000;
+}
+
+.modal-content {
+    background: var(--surface-color);
+    color: var(--text-primary);
+    width: 100%;
+    max-width: 450px;
+    margin: 10vh auto;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.modal-title {
+    color: var(--accent-color);
+    border-bottom: none;
+    margin-bottom: 0.5rem;
+}
+
+.modal-data {
+    background: var(--bg-color);
+    padding: 1.25rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    border: 1px solid var(--border-color);
+}
+
+.modal-data p { margin-bottom: 0.5rem; font-size: 0.95rem; word-wrap: break-word;}
+.modal-data p:last-child { margin-bottom: 0; }
+
+.outline-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    width: 100%;
+}
+.outline-btn:hover { background: var(--bg-color); }
